@@ -1,0 +1,112 @@
+@import '../../sass/_globals';
+
+.button {
+    background-color: #5096da;
+    color: $color-white;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: to-rem(18px);
+    font-weight: 600;
+    line-height: to-rem(25px);
+    outline: 0;
+    overflow: visible;
+    padding: to-rem(15px) to-rem(20px);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -0.4px;
+    width: auto;
+    cursor: pointer;
+    min-width: to-rem(200px);
+    max-width: to-rem(300);
+    @include transition(all 0.3s);
+
+    &:hover,
+    &:focus {
+        background-color: lighten($color-brand-blue, 5%);
+    }
+
+    &_action {
+        &:hover,
+        &:focus {
+            background-color: darken($color-brand-blue, 5%);
+        }
+    }
+
+    &_large {
+        width: 100%;
+        padding: to-rem(14px) to-rem(20px);
+    }
+
+    &_full {
+        max-width: 100%;
+    }
+
+    &_small {
+        font-size: to-rem(16px);
+        line-height: to-rem(20px);
+        padding: to-rem(8px) to-rem(14px);
+        min-width: to-rem(100px);
+    }
+
+    // Button Colours
+    &_color_ {
+        &white {
+            background-color: $color-white;
+            color: #333333;
+
+            &:hover,
+            &:focus {
+                background-color: darken($color-white, 3%);
+            }
+        }
+
+        &lightblue {
+            background-color: lighten($color-brand-light-blue, 5%);
+            color: $color-brand-blue-secondary;
+            &:hover,
+            &:focus {
+                background-color: $color-brand-light-blue;
+            }
+        }
+
+        &darkblue {
+            background-color: $color-brand-blue-secondary;
+            color: $color-white;
+            &:hover,
+            &:focus {
+                background-color: lighten($color-brand-blue-secondary, 5%);
+            }
+        }
+
+        &red {
+            background-color: $color-red;
+            color: $color-white;
+            &:hover,
+            &:focus {
+                background-color: darken($color-red, 5%);
+            }
+        }
+    }
+}
+
+.icon {
+    &Wrap {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-right: to-rem(10);
+            height: to-rem(20);
+        }
+    }
+
+    &Left {
+        justify-content: space-between;
+    }
+}
+
+.fluid {
+    min-width: auto;
+}

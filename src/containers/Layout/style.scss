@@ -1,0 +1,88 @@
+@import '../../sass/_globals';
+
+@import '../../sass/globals/reset';
+@import '../../sass/globals/typography';
+
+html {
+    background-color: $color-white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // Needed to make the form sticky work.
+    @media only screen and (max-width: to-rem($tablet-to-tablet)) {
+        overflow-x: hidden;
+    }
+}
+
+.siteSlide {
+    @include transition(all 0.3s);
+    min-height: 100%;
+    position: relative;
+    right: 0;
+    transform: none;
+    width: 100%;
+    will-change: transform;
+
+    // Needed to make the form sticky work.
+    @media only screen and (max-width: to-rem($tablet-to-tablet)) {
+        overflow-x: hidden;
+    }
+
+    &_active {
+        transform: translateX(-300px);
+    }
+
+    &_cover {
+        @include transition(all 0.3s);
+        background-color: $color-black;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+
+        position: absolute;
+        top: 0;
+        transform: translateX(-1000px);
+        width: 100%;
+        z-index: 10;
+
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            display: none;
+        }
+
+        .siteSlide_active & {
+            opacity: 0.7;
+            transform: none;
+        }
+    }
+}
+
+.siteWrapper {
+    min-height: calc(100vh - 160px);
+    position: relative;
+
+    &.full {
+        min-height: 100vh;
+    }
+
+    @media only screen and (min-width: to-rem($mobile-to-tablet - 1)) {
+        min-height: calc(100vh - 140px);
+    }
+}
+
+.gatsby-image-wrapper {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.wysiwyg div:not(.gatsby-image-wrapper) > img,
+.wysiwyg div:not(.gatsby-image-wrapper) > picture > img {
+    display: none;
+}
+
+ul li .gatsby-image-wrapper {
+    margin-right: to-rem(5);
+}

@@ -1,0 +1,38 @@
+@import '../../sass/_globals';
+
+.footer {
+    background-color: $color-border-grey;
+    color: $color-black;
+    font-family: 'Open Sans', sans-serif;
+    padding: to-rem(50) 0;
+
+    &Wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: $global--max-width;
+            padding: to-rem(10px) to-rem(20px);
+        }
+
+        @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+            padding: to-rem(20px) 0;
+        }
+    }
+
+    &Copyright {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: to-rem(15);
+        font-weight: $global--font-regular;
+    }
+
+    &Link {
+        text-decoration: none;
+    }
+}

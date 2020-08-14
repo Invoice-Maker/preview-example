@@ -1,0 +1,28 @@
+@mixin banner_heading() {
+    font-size: to-rem(34);
+    line-height: 1.2;
+    letter-spacing: to-rem(-1.38166px);
+    font-weight: 700;
+    color: $color-black;
+    span {
+        display: block;
+        clear: left;
+    }
+    @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+        font-size: to-rem(35);
+    }
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        font-size: to-rem(40);
+    }
+    @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+        font-size: to-rem(46);
+    }
+}
+
+@mixin banner_content() {
+    font-size: to-rem(20);
+    line-height: 1.4;
+    font-weight: 500;
+    color: #656b7d;
+    letter-spacing: -0.2px;
+}

@@ -1,0 +1,79 @@
+@import '../_globals';
+
+.templateWrap {
+    width: 100%;
+    @media only screen and (min-width: to-rem(1040)) {
+        margin: 0 auto;
+        width: to-rem(1040);
+    }
+}
+
+.flex {
+    margin: 0 0 to-rem(20) 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    @media only screen and (min-width: to-rem(1040)) {
+        margin: 0 auto to-rem(40) auto;
+        flex-direction: row;
+    }
+}
+
+.title {
+    font-size: to-rem(30);
+    font-weight: 700;
+    border-bottom: 1px solid #e6e6ec;
+    padding-bottom: to-rem(24);
+    margin: 0;
+    @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+        font-size: to-rem(40);
+    }
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        font-size: to-rem(50);
+    }
+}
+
+.article {
+    width: 100%;
+    max-width: to-rem(620);
+    margin: 0 auto;
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        margin: 0;
+    }
+}
+
+.aside {
+    width: to-rem(262);
+    margin: 0 auto to-rem(20) auto;
+    padding-top: to-rem(20);
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        margin: 0;
+        padding-top: to-rem(50);
+    }
+}
+
+.fileWrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featuredImage {
+    margin-bottom: to-rem(15);
+    border: 1px solid #35373d;
+    width: 260px;
+}
+
+.belowWindow {
+    position: absolute;
+    top: 110vh;
+    width: 1px;
+    height: 1px;
+}
+
+.observeWrap {
+    min-height: to-rem(1200px);
+}

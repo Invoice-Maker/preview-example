@@ -1,0 +1,10 @@
+@import '../../sass/_globals';
+
+.image {
+    max-width: 100%;
+}
+
+.shadow {
+  box-shadow: 0 10px 10px darken(rgba($color-brand-purple, 0.35),10%);
+  max-width: 100%;
+}

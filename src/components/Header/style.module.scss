@@ -1,0 +1,44 @@
+@import '../../sass/_globals';
+
+.header {
+    background-color: $color-white;
+    border-bottom: 1px solid $color-border-grey;
+    position: relative;
+    z-index: 5;
+
+    &Wrap {
+        padding: to-rem(10px) 0;
+
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: $global--max-width;
+            padding: to-rem(10px) to-rem(20px);
+        }
+
+        @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+            padding: to-rem(16px) 0;
+        }
+
+        &_icons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+
+            @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+                width: to-rem(260);
+            }
+        }
+    }
+}
+
+.burgerWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        display: none;
+    }
+}

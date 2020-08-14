@@ -1,0 +1,32 @@
+@import '../_globals';
+
+.page404 {
+    svg {
+        padding: to-rem(30);
+        margin-top: to-rem(30);
+        width: 100%;
+        height: auto;
+
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            margin-top: to-rem(70);
+            padding: 0 to-rem(100);
+        }
+
+        @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+            margin-top: to-rem(90);
+            padding: 0 to-rem(240);
+        }
+    }
+    p {
+        font-size: to-rem(20);
+        color: #35373d;
+        text-align: center;
+        margin: to-rem(20);
+        margin-bottom: to-rem(40);
+
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            margin-top: to-rem(50);
+            margin-bottom: to-rem(70);
+        }
+    }
+}

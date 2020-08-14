@@ -1,0 +1,134 @@
+@import '../../sass/_globals';
+
+.wysiwygContent,
+.wysiwygContent_large {
+    color: $color-black;
+    margin: to-rem(20px) 0;
+    font-size: to-rem(20);
+
+    p,
+    li {
+        font-size: to-rem(20);
+        line-height: to-rem(30);
+        margin-bottom: to-rem(10px);
+    }
+
+    p {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul li {
+        margin-bottom: 0;
+    }
+
+    a[href],
+    ul li {
+        > div,
+        > img {
+            display: inline-block;
+        }
+    }
+
+    a[href] {
+        color: #387abc;
+        text-decoration: none;
+        &:hover {
+            color: darken(#387abc, 10%);
+            text-decoration: underline;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: to-rem(20px) 0 to-rem(10px) 0;
+        img {
+            display: inline-block;
+        }
+    }
+
+    h1 {
+        font-size: to-rem(35);
+        line-height: 1.2;
+
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(40);
+        }
+    }
+
+    h2 {
+        font-size: to-rem(30);
+        line-height: 1.2;
+        margin: to-rem(15px) 0;
+
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(32);
+        }
+    }
+
+    h3 {
+        font-size: to-rem(25);
+        line-height: 1.2;
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(30);
+        }
+    }
+
+    h4 {
+        font-size: to-rem(22);
+        line-height: 1.2;
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(25);
+        }
+    }
+
+    h5 {
+        font-size: to-rem(22);
+        line-height: 1.2;
+        text-decoration: underline;
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(25);
+        }
+    }
+
+    h6 {
+        font-size: to-rem(22);
+        font-style: italic;
+        line-height: 1.2;
+        text-decoration: underline;
+        @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+            font-size: to-rem(25);
+        }
+    }
+
+    table {
+        border: solid 1px #707070;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        font-size: to-rem(18);
+    }
+    thead th {
+        background-color: #707070;
+        border: solid 1px #707070;
+        color: #fff;
+        padding: to-rem(16);
+        text-align: left;
+        text-transform: uppercase;
+    }
+    tbody td {
+        border: solid 1px #707070;
+        color: #1b1e26;
+        padding: to-rem(16);
+    }
+}
+
+.wysiwyg_content__large {
+    margin: to-rem(50px) 0 to-rem(20px) 0;
+}

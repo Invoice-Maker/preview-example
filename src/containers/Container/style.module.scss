@@ -1,0 +1,34 @@
+@import '../../sass/_globals';
+
+.container {
+    padding: 0 to-rem(20px);
+
+    @media only screen and (max-width: to-rem($mobile-to-tablet)) {
+        &_hideOnMobile {
+            padding: 0;
+        }
+    }
+
+    @media only screen and (min-width: to-rem($mobile-to-tablet)) {
+        padding: 0 to-rem(25px);
+    }
+
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        padding: 0 to-rem(30px);
+        &_thin {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            max-width: to-rem($global--thin-width) !important;
+        }
+    }
+
+    @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+        margin: 0 auto;
+        max-width: to-rem($global--max-width);
+    }
+
+    @media only screen and (min-width: to-rem($global--max-width + 60)) {
+        padding: 0;
+    }
+}

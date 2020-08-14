@@ -1,0 +1,97 @@
+@import '../_globals';
+
+.contentWrap {
+    margin-top: to-rem(28);
+    text-align: center;
+    @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+        margin-top: to-rem(40);
+    }
+}
+
+.heading {
+    font-size: to-rem(28);
+}
+
+.subHeading {
+    @include banner_content;
+    font-weight: 700;
+}
+
+.pageIntro {
+    @include banner_content;
+    max-width: to-rem(900);
+    margin: to-rem(20) auto;
+}
+
+.templateSearch {
+    &Form,
+    &Input {
+        position: relative;
+        width: 100%;
+    }
+    &Icon {
+        z-index: 2;
+        width: to-rem(20);
+        position: absolute;
+        top: 30%;
+        left: to-rem(13);
+        opacity: 0.7;
+        svg {
+            width: 100%;
+            display: block;
+        }
+    }
+    &Input {
+        font-size: to-rem(18);
+        display: block;
+        padding: to-rem(12) to-rem(15) to-rem(12) to-rem(45);
+        border: 1px solid $color-light-grey;
+        border-radius: to-rem(5);
+    }
+}
+
+.ctaWrap {
+    text-align: center;
+}
+
+.noResults {
+    color: $color-black;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: to-rem(16);
+}
+
+.ctaWrap,
+.searchResults,
+.listWrap {
+    margin: to-rem(30) 0;
+}
+
+.list {
+    text-align: left;
+    list-style: none;
+    display: flex;
+    flex-flow: wrap row;
+    margin: 0;
+
+    &Item {
+        width: 100%;
+        margin-bottom: to-rem(3);
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            width: 50%;
+        }
+        @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+            width: 33%;
+        }
+
+        a {
+            color: $color-brand-blue;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: to-rem(16);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+@import '../../sass/_globals';
+
+.wysiwyg {
+    .dropshadow,
+    .addshadow {
+        @include transition(all 0.3s);
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+        margin: 0 auto;
+    }
+
+    .dropshadow:hover,
+    .addshadow:hover {
+        filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    .size-full {
+        margin-right: 0;
+    }
+
+    /** Alignment **/
+
+    .alignleft,
+    .alignright,
+    .aligncenter {
+        margin: 0.5em 1em 1em 1em;
+    }
+
+    .alignleft {
+        float: left;
+        margin-left: 0;
+    }
+
+    .alignright {
+        float: right;
+        margin-right: 0;
+    }
+
+    .aligncenter {
+        margin: 0.5em auto;
+    }
+
+    .invoice-maker-btn {
+        background-color: #5096da;
+        color: $color-white !important;
+        border-radius: 2px;
+        display: block;
+        font-size: to-rem(18px);
+        font-weight: 600;
+        line-height: to-rem(25px);
+        outline: 0;
+        overflow: visible;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        margin: to-rem(10) 0;
+        padding: to-rem(14px) to-rem(20px);
+        cursor: pointer;
+        min-width: to-rem(200px);
+        max-width: to-rem(300);
+        @include transition(all 0.3s);
+
+        &:hover,
+        &:focus {
+            background-color: lighten($color-brand-blue, 5%);
+        }
+    }
+
+    /** Columns **/
+
+    .document-column-container {
+        text-align: center;
+
+        a {
+            display: block;
+        }
+
+        h3 {
+            font-size: to-rem(20);
+        }
+
+        .subtext {
+            font-size: to-rem(16);
+        }
+
+        .icon-text {
+            font-size: to-rem(16);
+            text-decoration: none;
+        }
+
+        .two-col-docs,
+        .three-col-docs,
+        .four-col-docs {
+            &-buttons {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                &-wrapper-item {
+                    width: 30%;
+
+                    img {
+                        width: to-rem(40px);
+                        margin: 0;
+                    }
+
+                    br {
+                        display: none;
+                    }
+
+                    a {
+                        display: block;
+                        @include transition(all 0.3s);
+                        text-decoration: none;
+
+                        &:hover {
+                            color: darken(#387abc, 60%);
+                            img {
+                                opacity: 0.7;
+                            }
+                        }
+                        span {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: to-rem($tablet-to-tablet)) {
+            display: flex;
+            flex-wrap: wrap;
+
+            .two-col-docs,
+            .three-col-docs,
+            .four-col-docs {
+                width: 47.5%;
+                margin-right: 5%;
+            }
+
+            .two-col-docs:nth-child(2),
+            .three-col-docs:nth-child(2),
+            .four-col-docs:nth-child(2) {
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (min-width: to-rem($tablet-to-desktop)) {
+            .three-col-docs {
+                width: 30%;
+                margin-right: 5%;
+            }
+
+            .four-col-docs {
+                width: 20%;
+                margin-right: 5%;
+            }
+
+            .three-col-docs:nth-child(2),
+            .four-col-docs:nth-child(2) {
+                margin-right: 5%;
+            }
+
+            .three-col-docs:nth-child(3),
+            .four-col-docs:nth-child(4) {
+                margin-right: 0;
+            }
+        }
+    }
+}
